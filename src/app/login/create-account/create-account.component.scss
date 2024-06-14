@@ -1,0 +1,113 @@
+:host {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+}
+.row-layout {
+  display: flex;
+}
+.left {
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  min-width: min-content;
+  min-height: 50px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+.group {
+  justify-content: center;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 20px;
+  margin: 64px;
+  min-width: 380px;
+  min-height: 50px;
+  max-width: 500px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.group_1 {
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  margin: 0 0 20px;
+  min-width: 50px;
+}
+.group_2 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 20px;
+  position: relative;
+  margin: 0 0 10px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_3 {
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  min-width: 50px;
+  min-height: 0;
+  flex-shrink: 0;
+}
+.image {
+  object-fit: cover;
+  width: 30px;
+  min-width: 0;
+  min-height: 0;
+  max-width: 30px;
+  flex-shrink: 0;
+}
+.text {
+  color: hsla(var(--ig-gray-800));
+  margin: 0 0 0 10px;
+  height: max-content;
+  min-width: min-content;
+}
+.h5 {
+  margin: 0 0 10px;
+  height: max-content;
+  min-width: min-content;
+}
+.text_1 {
+  color: hsla(var(--ig-gray-700));
+  margin: 0 0 16px;
+  height: max-content;
+  min-width: min-content;
+}
+.text_2 {
+  margin: 0 10px 0 0;
+  height: max-content;
+  min-width: min-content;
+}
+.hyperlink {
+  color: hsla(var(--ig-primary-400));
+  cursor: pointer;
+  height: max-content;
+  min-width: min-content;
+  flex-shrink: 0;
+}
+.input {
+  height: max-content;
+  min-width: min-content;
+}
+.input_1 {
+  height: max-content;
+  min-width: min-content;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.button {
+  height: max-content;
+}

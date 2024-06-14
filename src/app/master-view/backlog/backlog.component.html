@@ -1,0 +1,187 @@
+<div class="column-layout left-nav">
+  <h6 class="h6">
+    Backlog
+  </h6>
+  <igx-list class="list">
+    <igx-list-item [isHeader]="true">INDIGO.DESIGN</igx-list-item>
+    <igx-list-item>
+      <span igxListThumbnail>
+        <igx-avatar class="avatar">
+          <igx-icon class="icon">
+            dashboard
+          </igx-icon>
+        </igx-avatar>
+      </span>
+      <span igxListLineTitle>Growth Hacking</span>
+    </igx-list-item>
+    <igx-list-item>
+      <span igxListThumbnail>
+        <igx-avatar class="avatar_1">
+          <igx-icon class="icon">
+            dashboard
+          </igx-icon>
+        </igx-avatar>
+      </span>
+      <span igxListLineTitle>Public Preview</span>
+    </igx-list-item>
+    <igx-list-item>
+      <span igxListThumbnail>
+        <igx-avatar class="avatar_2">
+          <igx-icon class="icon">
+            dashboard
+          </igx-icon>
+        </igx-avatar>
+      </span>
+      <span igxListLineTitle>UX Feedback</span>
+    </igx-list-item>
+  </igx-list>
+  <button igxButton="flat" igxRipple class="button">
+    <igx-icon>
+      add
+    </igx-icon>
+    <span>ADD NEW PROJECT</span>
+  </button>
+</div>
+<div class="row-layout right-container">
+  <div class="column-layout content">
+    <div class="row-layout content-toolbar">
+      <h5 class="h5">
+        Growth Hacking
+      </h5>
+      <div class="row-layout group">
+        <button igxButton="flat" igxRipple class="button_1">
+          <igx-icon>
+            settings
+          </igx-icon>
+          <span>Settings</span>
+        </button>
+        <button igxRipple igxIconButton="flat" (click)="groupVisible = !groupVisible" class="icon-button">
+          <igx-icon class="icon_1">
+            filter_list
+          </igx-icon>
+        </button>
+      </div>
+    </div>
+    <div *ngIf="groupVisible" class="row-layout filters">
+      <div class="row-layout group_1">
+        <igx-input-group type="box" class="input">
+          <input type="text" igxInput />
+          <label igxLabel>Filter by keyword</label>
+        </igx-input-group>
+      </div>
+      <div class="row-layout group_2">
+        <button igxButton="flat" igxRipple class="button_1">
+          <span>Assigned to</span>
+          <igx-icon>
+            keyboard_arrow_down
+          </igx-icon>
+        </button>
+        <button igxButton="flat" igxRipple class="button_1">
+          <span>Iteration</span>
+          <igx-icon>
+            keyboard_arrow_down
+          </igx-icon>
+        </button>
+        <button igxButton="flat" igxRipple class="button_1">
+          <span>Area</span>
+          <igx-icon>
+            keyboard_arrow_down
+          </igx-icon>
+        </button>
+        <button igxRipple igxIconButton="flat" (click)="groupVisible = !groupVisible" class="icon-button_1">
+          <igx-icon>
+            close
+          </igx-icon>
+        </button>
+      </div>
+    </div>
+    <igx-tabs [disableAnimation]="true" class="tabs">
+      <igx-tab-item [selected]="true" class="tab-item">
+        <igx-tab-header>
+          <span igxTabHeaderLabel>Q1</span>
+        </igx-tab-header>
+        <igx-tab-content class="column-layout tab-item-content">
+          <igx-grid [data]="northwindOrders" primaryKey="employeeID" displayDensity="cosy" [allowFiltering]="true" filterMode="excelStyleFilter" class="grid">
+            <igx-column field="orderID" dataType="number" header="orderID" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="customerID" dataType="string" header="customerID" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="employeeID" dataType="number" header="employeeID" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="orderDate" dataType="date" header="orderDate" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="requiredDate" dataType="date" header="requiredDate" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="shippedDate" dataType="date" header="shippedDate" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="shipVia" dataType="number" header="shipVia" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="freight" dataType="number" header="freight" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="shipName" dataType="string" header="shipName" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="shipAddress.street" dataType="string" header="street" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="shipAddress.city" dataType="string" header="city" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="shipAddress.region" dataType="string" header="region" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="shipAddress.postalCode" dataType="string" header="postalCode" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="shipAddress.country" dataType="string" header="country" [sortable]="true" [selectable]="false"></igx-column>
+          </igx-grid>
+        </igx-tab-content>
+      </igx-tab-item>
+      <igx-tab-item [disabled]="true" class="tab-item">
+        <igx-tab-header>
+          <span igxTabHeaderLabel>Q2</span>
+        </igx-tab-header>
+        <igx-tab-content class="row-layout tab-item-content">
+          <igx-grid [data]="northwindCustomers" primaryKey="customerID" displayDensity="cosy" [allowFiltering]="true" filterMode="excelStyleFilter" class="grid_1">
+            <igx-column field="customerID" dataType="string" header="customerID" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="companyName" dataType="string" header="companyName" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="contactName" dataType="string" header="contactName" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="contactTitle" dataType="string" header="contactTitle" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="address.street" dataType="string" header="address street" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="address.city" dataType="string" header="address city" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="address.region" dataType="string" header="address region" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="address.postalCode" dataType="string" header="address postalCode" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="address.country" dataType="string" header="address country" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="address.phone" dataType="string" header="address phone" [sortable]="true" [selectable]="false"></igx-column>
+          </igx-grid>
+        </igx-tab-content>
+      </igx-tab-item>
+      <igx-tab-item [disabled]="true" class="tab-item">
+        <igx-tab-header>
+          <span igxTabHeaderLabel>Q3</span>
+        </igx-tab-header>
+        <igx-tab-content class="row-layout tab-item-content">
+          <igx-grid [data]="northwindEmployees" primaryKey="employeeID" displayDensity="cosy" [allowFiltering]="true" filterMode="excelStyleFilter" class="grid_1">
+            <igx-column field="lastName" dataType="string" header="lastName" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="employeeID" dataType="number" header="employeeID" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="firstName" dataType="string" header="firstName" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="title" dataType="string" header="title" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="titleOfCourtesy" dataType="string" header="titleOfCourtesy" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="birthDate" dataType="date" header="birthDate" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="hireDate" dataType="date" header="hireDate" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="address.street" dataType="string" header="address street" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="address.city" dataType="string" header="address city" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="address.region" dataType="string" header="address region" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="address.postalCode" dataType="string" header="address postalCode" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="address.country" dataType="string" header="address country" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="address.phone" dataType="string" header="address phone" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="managerID" dataType="number" header="managerID" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="notes" dataType="string" header="notes" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="avatarUrl" dataType="string" header="avatarUrl" [sortable]="true" [selectable]="false"></igx-column>
+          </igx-grid>
+        </igx-tab-content>
+      </igx-tab-item>
+      <igx-tab-item [disabled]="true" class="tab-item">
+        <igx-tab-header>
+          <span igxTabHeaderLabel>Q4</span>
+        </igx-tab-header>
+        <igx-tab-content class="row-layout tab-item-content">
+          <igx-grid [data]="northwindSuppliers" primaryKey="supplierID" displayDensity="cosy" [allowFiltering]="true" filterMode="excelStyleFilter" class="grid_1">
+            <igx-column field="supplierID" dataType="number" header="supplierID" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="companyName" dataType="string" header="companyName" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="contactName" dataType="string" header="contactName" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="contactTitle" dataType="string" header="contactTitle" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="address.street" dataType="string" header="address street" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="address.city" dataType="string" header="address city" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="address.region" dataType="string" header="address region" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="address.postalCode" dataType="string" header="address postalCode" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="address.country" dataType="string" header="address country" [sortable]="true" [selectable]="false"></igx-column>
+            <igx-column field="address.phone" dataType="string" header="address phone" [sortable]="true" [selectable]="false"></igx-column>
+          </igx-grid>
+        </igx-tab-content>
+      </igx-tab-item>
+    </igx-tabs>
+  </div>
+</div>

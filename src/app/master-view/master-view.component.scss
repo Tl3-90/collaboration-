@@ -1,0 +1,194 @@
+:host {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  overflow: hidden;
+}
+.row-layout {
+  display: flex;
+}
+.header {
+  background-color: hsla(var(--ig-success-500));
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  padding: 12px 20px;
+  height: 60px;
+  min-height: 60px;
+  max-height: 60px;
+  flex-shrink: 0;
+}
+.group {
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+  flex-grow: 1;
+}
+.group_1 {
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+}
+.group_2 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+  flex-grow: 1;
+}
+.group_3 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+.group_4 {
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  gap: 24px;
+  min-width: 640px;
+  min-height: 50px;
+}
+.group_5 {
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  gap: 8px;
+  min-width: 50px;
+}
+.group_6 {
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+  gap: 24px;
+}
+.group_7 {
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  gap: 8px;
+  position: relative;
+  min-width: 50px;
+}
+.group_8 {
+  justify-content: flex-end;
+  align-items: center;
+  align-content: flex-start;
+  gap: 16px;
+  padding: 16px 0 12px;
+}
+.image {
+  object-fit: cover;
+  margin: 0 8px 0 0;
+  width: 26px;
+  min-width: 0;
+  min-height: 0;
+  max-width: 26px;
+  flex-shrink: 0;
+}
+.icon {
+  color: #222222;
+}
+.icon_1 {
+  color: hsla(var(--ig-gray-900));
+}
+.avatar {
+  --igx-avatar-background: transparent;
+}
+.icon_2 {
+  --size: 24px;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+.icon_3 {
+  --size: 18px;
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+}
+.text {
+  height: max-content;
+  min-width: min-content;
+}
+.button {
+  --igx-button-foreground: #222222;
+  height: max-content;
+  flex-shrink: 0;
+}
+.project-dropdown {
+  left: 35px;
+  top: 0;
+  position: absolute;
+  width: 222px;
+  height: max-content;
+  min-width: min-content;
+  max-width: 222px;
+  flex-shrink: 0;
+}
+.button_1 {
+  --igx-button-foreground: hsla(var(--ig-gray-900));
+  --igx-button-background: hsla(var(--ig-surface-500));
+  margin: 0 16px 0 0;
+  height: max-content;
+  flex-shrink: 0;
+}
+.profile-drop-down {
+  left: 0;
+  top: 0;
+  position: absolute;
+  height: max-content;
+  min-width: min-content;
+}
+.input {
+  height: max-content;
+  min-width: min-content;
+}
+.button_2 {
+  height: max-content;
+  flex-shrink: 0;
+}
+.icon-button {
+  --igx-button-foreground: #222222;
+  margin: 0 8px 0 0;
+}
+.textarea {
+  height: max-content;
+  min-width: min-content;
+}
+.nav-drawer {
+  min-width: min-content;
+  min-height: 0;
+  max-width: min-content;
+  flex-shrink: 0;
+}
+.view-container {
+  overflow: auto;
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+.badge {
+  width: max-content;
+  height: max-content;
+}
